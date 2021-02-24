@@ -1,7 +1,9 @@
 # MQTTBox-Fix
 Solve lib dependecies error 
 
-## _Solve starting error_
+
+## _Starting error_
+
 ```
 (MQTTBox:5514): Pango-ERROR **: 17:03:35.617: Harfbuzz version too old (1.2.7)
 
@@ -10,6 +12,16 @@ Trace/breakpoint trap (core dumped)
 ## Features
 
 - [LIB] Fix libraries dependecies error (Ubuntu ver.)
+
+### Check lib dep
+
+```
+$ ldd MQTTBox |grep pango
+
+	libpangocairo-1.0.so.0 => /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0 (0x00007f85b008d000)
+	libpango-1.0.so.0 => /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0 (0x00007f85af8ff000)
+	libpangoft2-1.0.so.0 => /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0 (0x00007f85aa7c2000)
+```
 
 ## Installation
 
